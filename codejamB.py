@@ -12,7 +12,7 @@ for i in range(num):
   farm_rate = float(line[1]) #farm rate
   seconds = 0
   while True:
-    # if 2 cookies per second < (2 + farm cookies per second) - (cookies for farm)
+    # if 2 cookies per second < (2 + farm cookies per second) + (cookies for farm)
     if cookies / rate < cookies / (rate + farm_rate) + farm / rate:
       seconds += cookies / rate #seconds = total divided by rate
       file_write.write("Case #{0}: {1}\n".format(i + 1, seconds))
